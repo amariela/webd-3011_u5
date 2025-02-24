@@ -12,3 +12,16 @@
 body {
     font-family: monospace;
 }
+
+table {
+    width: 70%;
+    text-align: center;
+    border: 1px solid black;
+    
+}
+
+tr, th {
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 5px;
+}

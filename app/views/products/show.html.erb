@@ -1,4 +1,8 @@
 <h1>Product: <%= @product.title %> </h1>
-<p>Stock - <%= @product.stock_quantity %></p>
-<p>Price - $<%= @product.price %></p>
+<hr />
+<p><b>Stock</b>: <%= @product.stock_quantity %></p>
+<p><b>Price</b>: $<%= @product.price %></p>
+<p><b>Category</b>: <%= @product.category.name %></p>
+
+<br/><br/>
 <%= link_to "Back to Products Page", products_path %>

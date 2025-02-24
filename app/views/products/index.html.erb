@@ -1,10 +1,23 @@
-<h2>All Products</h2>
+<h1>All Products</h1>
 <h3>Total: <%= @products.count %></h3>
-<ul id="products">
-    <% @products.each do |product| %>
-    <li id=<%= product.id%>>
-        <strong><%= link_to product.title, product %></strong> - Stock: <%= product.stock_quantity %> - Price: $<%= product.price %>
-    </li>
-    <% end %>
 
+<table id="products" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>In Stock</th>
+            <th>Price</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @products.each do |product| %>
+            <tr id="product<%= product.id%>">
+                <td><%= link_to product.title, product %></td>
+                <td><%= product.stock_quantity %></td>
+                <td>$<%= product.price %></td>
+                <td><%= product.category.name %></td>
+            </tr>
+        <% end %>
+    </tbody>
 </div>
